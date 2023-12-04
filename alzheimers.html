@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Alzhiemer's MRI Classification Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Updated: Nov 17 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html"></a></h1>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="#"><span>Technical Projects</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="alzheimers.html">Alzheimer's Classification</a></li>
+                <li><a href="curiocity.html">CurioCity</a></li>
+                <li><a href="markov.html">Markov Chain Models</a></li>
+                <li><a href="safr.html">Safr</a></li>
+                <li><a href="evo.html">Mini Projects</a></li>
+                <li><a href="ongoing.html">Ongoing projects</a></li>
+  
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </header><!-- End Header -->
+
+  <!-- BRAINS-->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="brains.css">
+  <title>Floating Brains</title>
+</head>
+<body>
+  <div class="landing-page">
+    <div class="brain-container" id="brain1"></div>
+    <div class="brain-container" id="brain2"></div>
+    <!-- Add more brain containers as needed -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- END OF BRAINS-->
+
+  <main id="main">
+  
+
+   <!-- ======= About Section ======= -->
+   <style>
+    /* Custom styles for the empty container */
+    .empty-container {
+      background-color: #ffffff; /* Set background color to white */
+      border-radius: 10px; /* Set border radius for rounded corners */
+      padding: 20px; /* Add some padding for content spacing */
+    }
+  </style>
+  
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container empty-container">
+      <p>
+        <h3> Alzheimer's Classification using MRI Scans: Neural Network Image Classification - Project Summary</h3>
+
+        In this project, our goal was to develop a neural network image classifier for Alzheimer's disease using MRI scans. We explored two approaches: one utilizing ResNet 101 and another involving a custom-built convolutional neural network (CNN).
+        
+        <h5> Dataset Overview:</h5>
+        We obtained a dataset from Kaggle containing 6,400 MRI scans categorized as non-demented, very mild demented, mild demented, and moderately demented. The imbalanced distribution, especially with a higher number of non-demented scans, posed challenges to our model's accuracy.
+        <img src="fig1.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="">
+        <h5>First Approach - ResNet 101: </h5>
+        For our initial approach, we implemented a ResNet 101 model using TensorFlow and Keras, aiming to benefit from its advanced capabilities. Despite achieving an accuracy of 63%, concerns about model robustness and the impact of skewed data led us to explore alternative solutions.
+        
+        Upon discovering an augmented dataset addressing the skewness issue, we achieved an 83% accuracy. However, due to the lack of transparency in the augmentation process, these results were not considered conclusive.
+        <img src="fig2.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="">
+        <h5> Second Approach - Custom CNN:</h5>
+        In our second approach, we developed a custom CNN with eight layers, achieving a remarkable accuracy of approximately 97.25%. This model classified scans into binary categories: non-demented and demented, based on the assumption that early Alzheimer's scans may appear normal.
+        <img src="fig3.png" class="img-fluid rounded b-shadow-a" alt="">
+        <h5>Model Evaluation and Insights:</h5>
+        We scrutinized our CNN model's performance by testing edited images simulating Alzheimer's effects. While the model accurately identified normal and edited demented brains, it showed limitations in recognizing the reverse edit, emphasizing potential feature complexities.
+        <img src="fig6.png" class="img-fluid rounded b-shadow-a" alt="">
+        <h5>Next Steps:</h5>
+        With improved CNN accuracy, future steps involve integrating ResNet 101 functionalities into our CNN model for enhanced performance. Reimplementing multiclass classification and assessing nuanced distinctions are priorities, along with exploring methods like one-hot encoding for broader categorization.
+        
+        <b> In summary, our project demonstrates promising strides in Alzheimer's classification using neural networks, with ongoing efforts to refine and optimize our models.</b>
+      </p>
+    </div>
+  </section>
+  
+
+  
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+            -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
