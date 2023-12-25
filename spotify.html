@@ -64,56 +64,24 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about-mf sect-pt4 route">
       <div class="container empty-container">
-        <h3>Safr</h3>
+        <h3>Spotify Playlist Feature Analysis</h3>
         <h5>Overview</h5>
-        Mental health is such a crucial aspect of our overall well-being, however various barriers hinder us from seeking the necessary help. Learning from my own experiences with mental health struggles, along with those of my loved ones, I designed this project to combat the stigma associated with mental health by collating all mental health providers on one platform to make access to mental health services more accessible, and to be made aware of the affordable options, along with being able to find providers who fit your preferences.
-
-        <p>
-
-        </p>
-        <h5>Common Problem Statements </h5>
-        <ul>
-            <li>Seeking mental health resources is often considered taboo, discouraging individuals from exploring therapy options.
-                Studies involving 144 research projects with over 90,000 participants indicate that stigma remains a significant deterrent to seeking mental health care. The COVID-19 pandemic has exacerbated mental health concerns, with 4 in 10 US adults reporting symptoms of anxiety and depression.
-            </li>
-            <li>First-time therapy seekers lack sufficient knowledge about the potential benefits of therapy, leading to hesitancy.</li>
-            <li>Existing therapy applications can be intimidating, relying on clinical questionnaires and self-diagnosis.</li>
-            <li>Many individuals, especially first-time seekers, struggle to find a starting point for accessing mental health services.</li>
-          </ul>
-        
-<h5>Proposed Solution</h5>
-<ul>
-    <li>Develop an easy-to-use application that normalizes therapy, offering a comprehensive database of mental health providers.
-        A budget of $500 million is predicted for global spending on mental health applications in 2022.
-    </li>
-    <li>Provide information on therapy benefits through fast facts and feature real stories of individuals sharing their positive therapy experiences.</li>
-    <li>Redesign clinical questionnaires to be more user-friendly, avoiding guiding answers, and reducing the intimidation factor.</li>
-    <li>  Create a platform where therapists and mental health providers can showcase their profiles, including specializations, icebreaker questions, and availability.</li>
-  </ul>
-
-<h5>Expected outcomes</h5>
-
-<h6> Reduced Stigma</h6>
-Normalizing therapy through an accessible application could contribute to breaking down societal barriers.
-<h6> Increased Awareness</h6>
-Sharing real stories and therapy benefits will enhance awareness, encouraging more individuals to explore mental health resources.
-<h6> Improved User Experience</h6>
-Redesigned questionnaires and user-friendly interfaces will make the therapy-seeking process less intimidating.
-<h6> Enhanced Reachability</h6>
-A comprehensive database of mental health providers with detailed profiles will facilitate easier matching between clients and therapists.
-
+       <p>
+           I love Los Angeles. Even though I was only there for 3 years due to Covid, for me it will always hold a special place in my heart, being the place that taught me agency, and gave me so much love. So I decided to
+           see if songs about Los Angeles echo my sentiment about the city. 
+           I developed a Python script that uses the Spotify API to download information about songs from any specified playlist. Here, I made a playlist of 100 songs which have Los Angeles, or LA in the name.
+           It then organizes the data into a pandas DataFrame, displaying details such as song name, album, artist, popularity, and various audio features. 
+           Finally, it creates a scatter plot using seaborn to visualize the danceability, energy, and valence of a subset of songs from the playlist.
+       </p>
 <div class="container text-center">
-    <h5>Proposed User Flow</h5>
-    <img src="safr1.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="" style="max-width: 70%;">
-    <h5>Sample reworded anxiety and depression diagnostic questionnaires</h5>
-    <div class="row">
-      <div class="col-md-6">
-        <img src="safr2.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="" style="max-width: 50%;">
-      </div>
-      <div class="col-md-6">
-        <img src="safr3.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="" style="max-width: 50%;">
-      </div>
-    </div>
+   <p> LA playlist</p>
+    <img src="laplaylist.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="" style="max-width: 70%;">
+   <p> Results </p>
+   <img src="graph.png" class="img-fluid rounded b-shadow-a mx-auto d-block" alt="" style="max-width: 70%;">
+   <p> 
+       This shows how the playlist fares in terms of valence, or the musical positiveness conveyed, energy, and danceability, on a scale of 0.0 to 1.0
+       <p> As can be seen from the graph, all songs about LA fare high on the list, making it being represented high energy, highly positive and vibrant city, even musically </p>
+   </p>
   </div>
 
         <p>
