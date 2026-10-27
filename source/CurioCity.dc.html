@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CurioCity</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;family=Poppins:wght@600&amp;display=swap">
+<style>
+body{margin:0}
+a{text-decoration:none}
+</style>
+</helmet>
+<div style="min-height: 3000px; box-sizing: border-box; background: {{t.bg}}; color: {{t.ink}}; font-family: Jost, 'Avenir Next', sans-serif; transition: background 0.25s, color 0.25s">
+<header style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 32px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; align-items: center; gap: 4px">
+<span style="margin-right: 6px; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; line-height: 1; color: {{heart.line}}">with</span>
+<a href="Home.dc.html" aria-label="Home" style="position: relative; display: block; width: 80px; height: 74px; flex-shrink: 0">
+<svg width="80" height="74" viewBox="-1 -1 26 24" aria-hidden="true" style="position: absolute; inset: 0"><path d="M12 21.2C12 21.2 1 14.4 1 7.4A5.4 5.4 0 0 1 12 4.6A5.4 5.4 0 0 1 23 7.4C23 14.4 12 21.2 12 21.2Z" fill="none" stroke="{{heart.line}}" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg>
+<span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 12px; height: 40px; display: flex; align-items: center; justify-content: center; gap: 1px; font-family: Poppins, sans-serif; font-size: 27px; font-weight: 600; line-height: 1.2; color: {{heart.line}}"><span>ल</span><span>व</span></span>
+</a>
+<span aria-hidden="true" style="align-self: flex-end; padding-bottom: 10px; font-size: 44px; font-weight: 500; line-height: 1; color: {{heart.line}}">,</span>
+<button type="button" onClick="{{cycle}}" aria-label="Change color" style="min-height: 44px; padding: 4px 12px; border: 0; border-radius: 0; background: {{name.bg}}; color: {{name.ink}}; font-family: inherit; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-left: 8px">Lakshita Vij</button>
+</div>
+<nav style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 18px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="Projects.dc.html" aria-current="page" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.a}}">My Work</a>
+<a href="Writing.dc.html" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.b}}">Writing</a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.c}}">GitHub</a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.d}}">LinkedIn</a>
+<a href="Creative.dc.html" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.e}}">Creative Quests</a>
+</nav>
+<button type="button" onClick="{{toggleDark}}" style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border: 1.5px solid {{t.ink}}; border-radius: 0; background: transparent; color: {{t.ink}}; font-family: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"></path></svg>
+<span>{{modeLabel}}</span>
+</button>
+</header>
+<main style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 40px 40px 72px; display: flex; flex-direction: column; gap: 36px">
+<a href="Projects.dc.html" style="align-self: flex-start; padding: 10px 0; color: {{t.ink}}; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">← My Work</span></a>
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 800px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; font-size: 15px; color: {{t.muted}}">
+<span style="padding: 2px 10px; background: {{l.b.tag}}; color: #111111; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">Product</span>
+<span>January – June 2022</span>
+</div>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.1; font-weight: 500; letter-spacing: -0.01em">CurioCity</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px; max-width: 800px; font-size: 21px; line-height: 1.75">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.25; font-weight: 500">Overview</h2>
+<p style="margin: 0">CurioCity has been one of my favorite parts of college. It has been the project that invigorated my interest in product management and being involved in the life cycle of a project from start to finish. The app's overall goal is to solve the problem of not knowing where to go as a group and avoid going to only commonly frequented places and experiences by providing a wide range of options based on your distance, budget, transportation, and activity preferences.</p>
+<p style="margin: 0">Why CurioCity was my passion project because my closest friends and I love exploring Los Angeles, and discovering new parts of town. However, after wrapping up the tourist spots, we were confused about where we could go, and I realized a lot of people and friend groups have similar problems!</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">Team Formation</h2>
+<p style="margin: 0">This was initially a challenging aspect for me because I was unfamiliar with the roles of frontend, backend, design and user research. However, I took up the challenge, and learned as much as I could to be conversationally fluent with domain experts as I interviewed them. Through this process, I created a 14 person team total (7 engineers, 3 UX researchers, 3 designers) and acted as a pivotal connection point between UX and engineering.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">Motivating User Research</h2>
+<p style="margin: 0">We distributed a Google Forms survey among UCLA students to gather insights on their preferences, decision-making factors for choosing places to visit, transportation preferences, and prioritized features from a predefined list for validation and focus in our development process.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 24px">
+<img src="/_blob/dba5a3b12144b064bc95ae6c6ee4f6a5" alt="CurioCity user research, first image" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid {{t.line}}">
+<img src="/_blob/78b414df718f6820e9abe3ee12f5b7e2" alt="CurioCity user research, second image" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid {{t.line}}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px; max-width: 800px; font-size: 21px; line-height: 1.75">
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">Layout</h2>
+<p style="margin: 0">Our MVP had 4 basic pages:</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 20px">
+<img src="/_blob/0c69811be2d048656e392b0d978baf7d" alt="CurioCity MVP page 1 of 4" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid {{t.line}}">
+<img src="/_blob/a0c84e81522871eab7247455f233a871" alt="CurioCity MVP page 2 of 4" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid {{t.line}}">
+<img src="/_blob/f345af750a5f706ab39ed51327d669fa" alt="CurioCity MVP page 3 of 4" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid {{t.line}}">
+<img src="/_blob/3ceeeb875a3d994459a6430b8dad2a97" alt="CurioCity MVP page 4 of 4" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid {{t.line}}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px">
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">MVP Walkthrough</h2>
+<video controls playsinline preload="metadata" src="/_blob/9a471986b82a5cfbdd987518c42ca72e" aria-label="Walkthrough video of the CurioCity MVP" style="display: block; width: 100%; height: auto; background: #000000"></video>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px">
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">Groupmatch Walkthrough</h2>
+<p style="margin: 0; font-size: 21px; line-height: 1.75">We began developing the group match feature, which would allow two or more users to input their preferences on their own devices and get a joint suggestion; used agile methodology to structure the timeline of feature development and coordinate across teams</p>
+<video controls playsinline preload="metadata" src="/_blob/8658a04b64e8f508c867750f97f6f137" aria-label="CurioCity Spring 2022 Demo Day video" style="display: block; width: 100%; height: auto; background: #000000"></video>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; max-width: 800px; padding-top: 24px; border-top: 1.5px solid {{t.line}}; font-size: 16px">
+<a href="Projects.dc.html" style="padding: 10px 0; color: {{t.ink}}; font-weight: 500"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">← Back to My Work</span></a>
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: {{t.ink}}; font-weight: 500"><span style="box-shadow: {{l.b.shadow}}; padding: 0 2px">Ask me about it →</span></a>
+</div>
+</main>
+<footer style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 0 40px 56px">
+<div style="border-top: 1.5px solid {{t.line}}; padding-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+<p style="margin: 0; font-size: 16px; color: {{t.muted}}">© 2026 Lakshita Vij · with love</p>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: {{l.a.color}}"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">Email</span></a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0; color: {{l.b.color}}"><span style="box-shadow: {{l.b.shadow}}; padding: 0 2px">GitHub</span></a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0; color: {{l.c.color}}"><span style="box-shadow: {{l.c.shadow}}; padding: 0 2px">LinkedIn</span></a>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"startDark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { ci: 0, dark: null };
+}
+renderVals() {
+const hl = ['#E6CBE4', '#D3AED0'];
+const deep = ['#5B2A5E', '#8A4F8C'];
+const names = [{ bg: '#5B2A5E', ink: '#FFFFFF' }, { bg: '#E6CBE4', ink: '#111111' }, { bg: '#D3AED0', ink: '#111111' }];
+const dark = this.state.dark ?? (this.props.startDark ?? false);
+const ci = this.state.ci;
+const pick = (i) => hl[(i + ci) % hl.length];
+const under = (i) => dark ? pick(i) : deep[(i + ci) % deep.length];
+const t = dark
+? { bg: '#141A13', ink: '#EEF0EA', muted: '#A9B3A2', line: '#2F3A2D', soft: '#1B2419' }
+: { bg: '#E5ECDE', ink: '#111111', muted: '#4F5A48', line: '#C4D1BA', soft: '#EDF2E7' };
+const link = (i) => dark
+? { color: pick(i), shadow: 'inset 0 -2px 0 ' + pick(i), tag: pick(i) }
+: { color: '#111111', shadow: 'inset 0 -0.45em 0 ' + pick(i), tag: pick(i) };
+return {
+t,
+modeLabel: dark ? 'Light' : 'Dark',
+name: names[ci % names.length],
+heart: { line: dark ? '#E6CBE4' : '#5B2A5E' },
+u: { a: under(0), b: under(1), c: under(2), d: under(3), e: under(4) },
+l: { a: link(0), b: link(1), c: link(2), d: link(3), e: link(4) },
+cycle: () => this.setState({ ci: (ci + 1) % names.length }),
+toggleDark: () => this.setState({ dark: !dark })
+};
+}
+}
+</script>
+</body>
+</html>

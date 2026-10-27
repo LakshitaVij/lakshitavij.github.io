@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lakshitavij.github.io/sitemap.xml

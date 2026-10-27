@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Writing</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;family=Poppins:wght@600&amp;display=swap">
+<style>
+body{margin:0}
+a{text-decoration:none}
+</style>
+</helmet>
+<div style="min-height: 700px; box-sizing: border-box; background: {{t.bg}}; color: {{t.ink}}; font-family: Jost, 'Avenir Next', sans-serif; transition: background 0.25s, color 0.25s">
+<header style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 32px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; align-items: center; gap: 4px">
+<span style="margin-right: 6px; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; line-height: 1; color: {{heart.line}}">with</span>
+<a href="Home.dc.html" aria-label="Home" style="position: relative; display: block; width: 80px; height: 74px; flex-shrink: 0">
+<svg width="80" height="74" viewBox="-1 -1 26 24" aria-hidden="true" style="position: absolute; inset: 0"><path d="M12 21.2C12 21.2 1 14.4 1 7.4A5.4 5.4 0 0 1 12 4.6A5.4 5.4 0 0 1 23 7.4C23 14.4 12 21.2 12 21.2Z" fill="none" stroke="{{heart.line}}" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg>
+<span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 12px; height: 40px; display: flex; align-items: center; justify-content: center; gap: 1px; font-family: Poppins, sans-serif; font-size: 27px; font-weight: 600; line-height: 1.2; color: {{heart.line}}"><span>ल</span><span>व</span></span>
+</a>
+<span aria-hidden="true" style="align-self: flex-end; padding-bottom: 10px; font-size: 44px; font-weight: 500; line-height: 1; color: {{heart.line}}">,</span>
+<button type="button" onClick="{{cycle}}" aria-label="Change color" style="min-height: 44px; padding: 4px 12px; border: 0; border-radius: 0; background: {{name.bg}}; color: {{name.ink}}; font-family: inherit; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-left: 8px">Lakshita Vij</button>
+</div>
+<nav style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 18px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="Projects.dc.html" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.a}}">My Work</a>
+<a href="Writing.dc.html" aria-current="page" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.b}}">Writing</a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.c}}">GitHub</a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.d}}">LinkedIn</a>
+<a href="Creative.dc.html" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.e}}">Creative Quests</a>
+</nav>
+<button type="button" onClick="{{toggleDark}}" style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border: 1.5px solid {{t.ink}}; border-radius: 0; background: transparent; color: {{t.ink}}; font-family: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"></path></svg>
+<span>{{modeLabel}}</span>
+</button>
+</header>
+<main style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 56px 40px 72px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h1 style="margin: 0; font-size: 44px; line-height: 1.15; font-weight: 500">Writing</h1>
+</div>
+<div style="display: flex; flex-direction: column; border-bottom: 1.5px solid {{t.line}}">
+<sc-for list="{{posts}}" as="p" hint-placeholder-count="5">
+<a href="{{p.href}}" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 24px; padding: 20px 0; border-top: 1.5px solid {{t.line}}; color: {{t.ink}}">
+<span style="width: 110px; flex-shrink: 0; font-size: 16px; color: {{t.muted}}">{{p.date}}</span>
+<span style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 26px; line-height: 1.3; font-weight: 500">{{p.title}}</span>
+<span style="font-size: 17px; line-height: 1.5; color: {{t.muted}}">{{p.dek}}</span>
+</span>
+<span style="display: flex; align-items: center; gap: 14px; font-size: 15px; color: {{t.muted}}">
+<span>{{p.mins}} min read</span>
+<span style="padding: 2px 10px; background: {{p.bg}}; color: #111111; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">{{p.topic}}</span>
+</span>
+</a>
+</sc-for>
+</div>
+</main>
+<footer style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 0 40px 56px">
+<div style="border-top: 1.5px solid {{t.line}}; padding-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+<p style="margin: 0; font-size: 16px; color: {{t.muted}}">© 2026 Lakshita Vij · with love</p>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: {{l.a.color}}"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">Email</span></a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0; color: {{l.b.color}}"><span style="box-shadow: {{l.b.shadow}}; padding: 0 2px">GitHub</span></a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0; color: {{l.c.color}}"><span style="box-shadow: {{l.c.shadow}}; padding: 0 2px">LinkedIn</span></a>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"startDark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { ci: 0, dark: null, sel: 'All' };
+}
+renderVals() {
+const hl = ['#E6CBE4', '#D3AED0'];
+const deep = ['#5B2A5E', '#8A4F8C'];
+const names = [{ bg: '#5B2A5E', ink: '#FFFFFF' }, { bg: '#E6CBE4', ink: '#111111' }, { bg: '#D3AED0', ink: '#111111' }];
+const dark = this.state.dark ?? (this.props.startDark ?? false);
+const ci = this.state.ci;
+const sel = this.state.sel;
+const pick = (i) => hl[(i + ci) % hl.length];
+const under = (i) => dark ? pick(i) : deep[(i + ci) % deep.length];
+const t = dark
+? { bg: '#141A13', ink: '#EEF0EA', muted: '#A9B3A2', line: '#2F3A2D', soft: '#1B2419' }
+: { bg: '#E5ECDE', ink: '#111111', muted: '#4F5A48', line: '#C4D1BA', soft: '#EDF2E7' };
+const link = (i) => dark
+? { color: pick(i), shadow: 'inset 0 -2px 0 ' + pick(i) }
+: { color: '#111111', shadow: 'inset 0 -0.45em 0 ' + pick(i) };
+const topics = ['Essay'];
+const all = [
+{ date: 'Oct 2026', mins: 3, topic: topics[0], href: 'Grandparents.dc.html', title: 'We have child locks; what about grandparental locks?', dek: 'Why are we not considering grandparental “locks” and elder safe communities online, like we do for kids?' }
+];
+const chipFill = dark ? '#E6CBE4' : '#5B2A5E';
+const chipInk = dark ? '#111111' : '#FFFFFF';
+return {
+t,
+modeLabel: dark ? 'Light' : 'Dark',
+name: names[ci % names.length],
+heart: { line: dark ? '#E6CBE4' : '#5B2A5E' },
+u: { a: under(0), b: under(1), c: under(2), d: under(3), e: under(4) },
+l: { a: link(0), b: link(1), c: link(2) },
+posts: all.map((p, i) => ({ ...p, bg: pick(topics.indexOf(p.topic)) })),
+cycle: () => this.setState({ ci: (ci + 1) % names.length }),
+toggleDark: () => this.setState({ dark: !dark })
+};
+}
+}
+</script>
+</body>
+</html>

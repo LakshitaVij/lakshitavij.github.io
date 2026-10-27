@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Autonomous Job Application Agent</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;family=Poppins:wght@600&amp;display=swap">
+<style>
+body{margin:0}
+a{text-decoration:none}
+</style>
+</helmet>
+<div style="min-height: 2100px; box-sizing: border-box; background: {{t.bg}}; color: {{t.ink}}; font-family: Jost, 'Avenir Next', sans-serif; transition: background 0.25s, color 0.25s">
+<header style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 32px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; align-items: center; gap: 4px">
+<span style="margin-right: 6px; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; line-height: 1; color: {{heart.line}}">with</span>
+<a href="Home.dc.html" aria-label="Home" style="position: relative; display: block; width: 80px; height: 74px; flex-shrink: 0">
+<svg width="80" height="74" viewBox="-1 -1 26 24" aria-hidden="true" style="position: absolute; inset: 0"><path d="M12 21.2C12 21.2 1 14.4 1 7.4A5.4 5.4 0 0 1 12 4.6A5.4 5.4 0 0 1 23 7.4C23 14.4 12 21.2 12 21.2Z" fill="none" stroke="{{heart.line}}" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg>
+<span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 12px; height: 40px; display: flex; align-items: center; justify-content: center; gap: 1px; font-family: Poppins, sans-serif; font-size: 27px; font-weight: 600; line-height: 1.2; color: {{heart.line}}"><span>ल</span><span>व</span></span>
+</a>
+<span aria-hidden="true" style="align-self: flex-end; padding-bottom: 10px; font-size: 44px; font-weight: 500; line-height: 1; color: {{heart.line}}">,</span>
+<button type="button" onClick="{{cycle}}" aria-label="Change color" style="min-height: 44px; padding: 4px 12px; border: 0; border-radius: 0; background: {{name.bg}}; color: {{name.ink}}; font-family: inherit; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-left: 8px">Lakshita Vij</button>
+</div>
+<nav style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 18px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="Projects.dc.html" aria-current="page" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.a}}">My Work</a>
+<a href="Writing.dc.html" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.b}}">Writing</a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.c}}">GitHub</a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.d}}">LinkedIn</a>
+<a href="Creative.dc.html" style="padding: 10px 0 4px; color: {{t.ink}}; border-bottom: 4px solid {{u.e}}">Creative Quests</a>
+</nav>
+<button type="button" onClick="{{toggleDark}}" style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border: 1.5px solid {{t.ink}}; border-radius: 0; background: transparent; color: {{t.ink}}; font-family: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"></path></svg>
+<span>{{modeLabel}}</span>
+</button>
+</header>
+<main style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 40px 40px 72px; display: flex; flex-direction: column; gap: 36px">
+<a href="Projects.dc.html" style="align-self: flex-start; padding: 10px 0; color: {{t.ink}}; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">← My Work</span></a>
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 800px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; font-size: 15px; color: {{t.muted}}">
+<span style="padding: 2px 10px; background: {{l.b.tag}}; color: #111111; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">AI agents</span>
+<span>Built on the Anthropic SDK</span>
+</div>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.1; font-weight: 500; letter-spacing: -0.01em">Autonomous job application agent</h1>
+<p style="margin: 0; font-size: 24px; line-height: 1.5">An agent that finds roles, judges how well I fit, researches the company, drafts outreach, and fills out applications on real job portals.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); border-top: 1.5px solid {{t.line}}; border-left: 1.5px solid {{t.line}}">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-right: 1.5px solid {{t.line}}; border-bottom: 1.5px solid {{t.line}}">
+<span style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: {{t.muted}}">Tools</span>
+<span style="font-size: 18px; line-height: 1.45">55, across five namespaces</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-right: 1.5px solid {{t.line}}; border-bottom: 1.5px solid {{t.line}}">
+<span style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: {{t.muted}}">Namespaces</span>
+<span style="font-size: 18px; line-height: 1.45">Search, evaluate, email, apply, document</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-right: 1.5px solid {{t.line}}; border-bottom: 1.5px solid {{t.line}}">
+<span style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: {{t.muted}}">Code</span>
+<a href="https://github.com/LakshitaVij/Job-Agent" target="_blank" rel="noopener" style="align-self: flex-start; padding: 2px 0; font-size: 18px; line-height: 1.45; color: {{l.c.color}}"><span style="box-shadow: {{l.c.shadow}}; padding: 0 2px">GitHub</span></a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px; max-width: 800px; font-size: 21px; line-height: 1.75">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.25; font-weight: 500">What it does</h2>
+<p style="margin: 0">Applying for jobs is repetitive work: searching, reading postings, judging fit, researching the company, writing outreach, filling out forms, and tracking it all. I built an agent that does the whole workflow on its own.</p>
+<p style="margin: 0">Its 55 tools are grouped into five namespaces: search, evaluate, email, apply and document. They connect to JSearch and Serper for finding roles and company news, Hunter.io for finding contacts, Gmail for outreach, and Notion for tracking every application.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">How it works</h2>
+<p style="margin: 0">A Claude-powered loop chooses tools dynamically from a registry, runs them, and feeds the results back until the task is done. A single run can take 45 or more tool calls, so I added a way to keep results alive across them: external state saved as JSON, which the agent reloads as it goes.</p>
+<p style="margin: 0">Around the loop is the scaffolding that makes it dependable: retries with exponential backoff, rate limiting, and logging of every tool call with its duration and outcome.</p>
+<p style="margin: 0">A subagent handles one focused job. Given a company and a role, it works in its own isolated context with a limited set of tools. It reads the job description and my resume, looks up what the company needs, and returns concrete things I could build for them, the most relevant parts of my experience, and talking points for a cold email.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">Real job portals</h2>
+<p style="margin: 0">The apply tools drive a real browser with Playwright. The agent detects whether a posting runs on Greenhouse or Lever, then fills out the basic fields, attaches the right portfolio links, answers each company’s custom questions, and handles Lever’s diversity and eligibility sections, all without a person stepping in.</p>
+<p style="margin: 0">There is also a Streamlit front end, packaged with Docker so it can be deployed, which lets me run the agent from a chat window and pick up a session where it left off.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">How I tested it</h2>
+<p style="margin: 0">I wrote an eval harness that runs the agent on realistic requests, such as finding machine learning roles in New York or judging how well my resume fits a specific role, and checks that it called the right tools enough times. I also added unit tests for the retry and state logic, and an integration test of the search flow.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">A decision I would defend</h2>
+<p style="margin: 0">I used the raw Anthropic SDK instead of LangGraph. I wanted to force myself to understand every part of the architecture, make the codebase easier to read, and avoid framework magic hiding critical decisions like context management and tool routing.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">What's next</h2>
+<p style="margin: 0">With more time, I would write more evaluation scenarios that use real API calls, tune the prompts in the evaluate namespace on real outputs, and summarize context better in very long sessions.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; max-width: 800px; padding-top: 24px; border-top: 1.5px solid {{t.line}}; font-size: 16px">
+<a href="Projects.dc.html" style="padding: 10px 0; color: {{t.ink}}; font-weight: 500"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">← Back to My Work</span></a>
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: {{t.ink}}; font-weight: 500"><span style="box-shadow: {{l.b.shadow}}; padding: 0 2px">Ask me about it →</span></a>
+</div>
+</main>
+<footer style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 0 40px 56px">
+<div style="border-top: 1.5px solid {{t.line}}; padding-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+<p style="margin: 0; font-size: 16px; color: {{t.muted}}">© 2026 Lakshita Vij · with love</p>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: {{l.a.color}}"><span style="box-shadow: {{l.a.shadow}}; padding: 0 2px">Email</span></a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0; color: {{l.b.color}}"><span style="box-shadow: {{l.b.shadow}}; padding: 0 2px">GitHub</span></a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0; color: {{l.c.color}}"><span style="box-shadow: {{l.c.shadow}}; padding: 0 2px">LinkedIn</span></a>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"startDark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":2100}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { ci: 0, dark: null };
+}
+renderVals() {
+const hl = ['#E6CBE4', '#D3AED0'];
+const deep = ['#5B2A5E', '#8A4F8C'];
+const names = [{ bg: '#5B2A5E', ink: '#FFFFFF' }, { bg: '#E6CBE4', ink: '#111111' }, { bg: '#D3AED0', ink: '#111111' }];
+const dark = this.state.dark ?? (this.props.startDark ?? false);
+const ci = this.state.ci;
+const pick = (i) => hl[(i + ci) % hl.length];
+const under = (i) => dark ? pick(i) : deep[(i + ci) % deep.length];
+const t = dark
+? { bg: '#141A13', ink: '#EEF0EA', muted: '#A9B3A2', line: '#2F3A2D', soft: '#1B2419' }
+: { bg: '#E5ECDE', ink: '#111111', muted: '#4F5A48', line: '#C4D1BA', soft: '#EDF2E7' };
+const link = (i) => dark
+? { color: pick(i), shadow: 'inset 0 -2px 0 ' + pick(i), tag: pick(i) }
+: { color: '#111111', shadow: 'inset 0 -0.45em 0 ' + pick(i), tag: pick(i) };
+return {
+t,
+modeLabel: dark ? 'Light' : 'Dark',
+name: names[ci % names.length],
+heart: { line: dark ? '#E6CBE4' : '#5B2A5E' },
+u: { a: under(0), b: under(1), c: under(2), d: under(3), e: under(4) },
+l: { a: link(0), b: link(1), c: link(2), d: link(3), e: link(4) },
+cycle: () => this.setState({ ci: (ci + 1) % names.length }),
+toggleDark: () => this.setState({ dark: !dark })
+};
+}
+}
+</script>
+</body>
+</html>

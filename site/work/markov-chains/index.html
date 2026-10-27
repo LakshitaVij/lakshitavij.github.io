@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-ci="0">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markov chain models of cichlid fish behavior · Lakshita Vij</title>
+<meta name="description" content="Markov chain models of animal behavior built at the Alvarado-Tajerian Lab, Queens College.">
+<link rel="canonical" href="https://lakshitavij.github.io/work/markov-chains/">
+<meta name="theme-color" content="#E5ECDE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141A13" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lakshita Vij">
+<meta property="og:title" content="Markov chain models of cichlid fish behavior · Lakshita Vij">
+<meta property="og:description" content="Markov chain models of animal behavior built at the Alvarado-Tajerian Lab, Queens College.">
+<meta property="og:url" content="https://lakshitavij.github.io/work/markov-chains/">
+<meta property="og:image" content="https://lakshitavij.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/favicon/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/favicon/apple-touch-icon.png">
+<link rel="preload" href="../../assets/fonts/jost-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/fonts.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var d=document.documentElement,s=localStorage,t=s.getItem('theme'),c=s.getItem('ci');d.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(c)d.dataset.ci=c}catch(e){}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div style="min-height: 100vh; box-sizing: border-box; background: var(--bg); color: var(--ink); font-family: Jost, 'Avenir Next', sans-serif; transition: background 0.25s, color 0.25s">
+<header class="site-header" style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 32px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; align-items: center; gap: 4px">
+<span style="margin-right: 6px; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; line-height: 1; color: var(--heart)">with</span>
+<a href="../../" aria-label="Home" style="position: relative; display: block; width: 80px; height: 74px; flex-shrink: 0">
+<svg width="80" height="74" viewBox="-1 -1 26 24" aria-hidden="true" style="position: absolute; inset: 0"><path d="M12 21.2C12 21.2 1 14.4 1 7.4A5.4 5.4 0 0 1 12 4.6A5.4 5.4 0 0 1 23 7.4C23 14.4 12 21.2 12 21.2Z" fill="none" stroke="var(--heart)" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg>
+<span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 12px; height: 40px; display: flex; align-items: center; justify-content: center; gap: 1px; font-family: Poppins, sans-serif; font-size: 27px; font-weight: 600; line-height: 1.2; color: var(--heart)"><span>ल</span><span>व</span></span>
+</a>
+<span aria-hidden="true" style="align-self: flex-end; padding-bottom: 10px; font-size: 44px; font-weight: 500; line-height: 1; color: var(--heart)">,</span>
+<button type="button" data-cycle aria-label="Change color" style="min-height: 44px; padding: 4px 12px; border: 0; border-radius: 0; background: var(--name-bg); color: var(--name-ink); font-family: inherit; font-size: 30px; font-weight: 500; letter-spacing: 0.01em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-left: 8px">Lakshita Vij</button>
+</div>
+<nav class="site-nav" aria-label="Primary" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 18px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="../" aria-current="page" style="padding: 10px 0 4px; color: var(--ink); border-bottom: 4px solid var(--u0)">My Work</a>
+<a href="../../writing/" style="padding: 10px 0 4px; color: var(--ink); border-bottom: 4px solid var(--u1)">Writing</a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: var(--ink); border-bottom: 4px solid var(--u0)">GitHub</a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0 4px; color: var(--ink); border-bottom: 4px solid var(--u1)">LinkedIn</a>
+<a href="../../creative/" style="padding: 10px 0 4px; color: var(--ink); border-bottom: 4px solid var(--u0)">Creative Quests</a>
+</nav>
+<button type="button" data-theme-toggle style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border: 1.5px solid var(--ink); border-radius: 0; background: transparent; color: var(--ink); font-family: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"></path></svg>
+<span data-mode-label>Dark</span>
+</button>
+</header>
+<main id="main" class="site-main" style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 40px 40px 72px; display: flex; flex-direction: column; gap: 36px">
+<a href="../" style="align-self: flex-start; padding: 10px 0; color: var(--ink); font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase"><span style="box-shadow: var(--ls0); padding: 0 2px">← My Work</span></a>
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 800px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; font-size: 15px; color: var(--muted)">
+<span style="padding: 2px 10px; background: var(--p1); color: #111111; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">Data analysis</span>
+<span>Alvarado-Tajerian Lab, Queens College</span>
+</div>
+<h1 class="page-title" style="margin: 0; font-size: 56px; line-height: 1.1; font-weight: 500; letter-spacing: -0.01em">Markov Chain Models</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px; max-width: 800px; font-size: 21px; line-height: 1.75">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.25; font-weight: 500">Overview</h2>
+<p style="margin: 0">In an attempt to simultaneously gain more research experience and develop my technical skills, I reached out to several professors all over New York City asking for an opportunity to work with them. Fortunately and graciously, Dr Alvarado replied, giving me the wonderful opportunity to be involved with the Alvarado-Tajerian Lab at Queens College.</p>
+<p style="margin: 0">I spearheaded advanced data analysis for the lab by creating Markov Chain models to discern and predict prevailing behavioral patterns within the cichlid fish population starting with a study that intends to examine how stressful events affect male sexual performance and reproductive capabilities using cichlid fish.</p>
+<p style="margin: 0">This was a learning curve for me as before this I had no clue what Markov chains were, or how they could be developed in Python. However, through several trials and errors, I got a running code which developed the Markov chains, but the code was quite chunky. I have now successfully been able to reduce the volume of code, and its written in such a way that it can be applied to any animal species behavior for its analysis.</p>
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">Sample Markov Chain Model</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px">
+<img loading="lazy" decoding="async" src="../../assets/img/markov-chain-1.jpg" alt="Sample Markov chain model of cichlid behaviors, first diagram" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid var(--line)">
+<img loading="lazy" decoding="async" src="../../assets/img/markov-chain-2.jpg" alt="Sample Markov chain model of cichlid behaviors, second diagram" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid var(--line)">
+<img loading="lazy" decoding="async" src="../../assets/img/markov-chain-3.jpg" alt="Sample Markov chain model of cichlid behaviors, third diagram" style="display: block; width: 100%; height: auto; background: #FFFFFF; border: 1.5px solid var(--line)">
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px">
+<h2 style="margin: 18px 0 0; font-size: 32px; line-height: 1.25; font-weight: 500">GUI</h2>
+<video controls playsinline preload="metadata" src="../../assets/video/markov-gui.mp4" aria-label="Screen recording of the Markov chain GUI" style="display: block; width: 100%; height: auto; background: #000000"></video>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 800px; font-size: 21px; line-height: 1.6">
+<h2 style="margin: 18px 0 8px; font-size: 32px; line-height: 1.25; font-weight: 500">Legend</h2>
+<div style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 16px; height: 16px; border-radius: 50%; background: #E00000; flex-shrink: 0"></span><span>Red represents aggressive behavior</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 16px; height: 16px; border-radius: 50%; background: #0B8A0B; flex-shrink: 0"></span><span>Green represents reproductive behavior</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 16px; height: 16px; border-radius: 50%; background: #1A1AF0; flex-shrink: 0"></span><span>Blue represents aversive behavior</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 16px; flex-shrink: 0; text-align: center; font-size: 15px; color: var(--muted)">#</span><span>The decimal number represents the likelihood with which a subsequent behavior will happen after current behavior</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; max-width: 800px; padding-top: 24px; border-top: 1.5px solid var(--line); font-size: 16px">
+<a href="../" style="padding: 10px 0; color: var(--ink); font-weight: 500"><span style="box-shadow: var(--ls0); padding: 0 2px">← Back to My Work</span></a>
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: var(--ink); font-weight: 500"><span style="box-shadow: var(--ls1); padding: 0 2px">Ask me about it →</span></a>
+</div>
+</main>
+<footer class="site-footer" style="max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 0 40px 56px">
+<div style="border-top: 1.5px solid var(--line); padding-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+<p style="margin: 0; font-size: 16px; color: var(--muted)">© 2026 Lakshita Vij · with love</p>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase">
+<a href="mailto:llakshitavijj@gmail.com" style="padding: 10px 0; color: var(--lc0)"><span style="box-shadow: var(--ls0); padding: 0 2px">Email</span></a>
+<a href="https://github.com/lakshitavij" target="_blank" rel="noopener" style="padding: 10px 0; color: var(--lc1)"><span style="box-shadow: var(--ls1); padding: 0 2px">GitHub</span></a>
+<a href="https://www.linkedin.com/in/llakshitavijj/" target="_blank" rel="noopener" style="padding: 10px 0; color: var(--lc0)"><span style="box-shadow: var(--ls0); padding: 0 2px">LinkedIn</span></a>
+</div>
+</div>
+</footer>
+</div>
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
